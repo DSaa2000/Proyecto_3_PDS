@@ -28,7 +28,7 @@ class DataBase:
     def Save(self):
         file = open("DB_Inventario.txt","w")
         for item in self.Inventario:
-            texto = str(self.Inventario[item].writeFile())
+            texto = str(self.Inventario[item].writeFile()+"\n")
             if texto != "" and texto != "\n":
                 file.write(texto)
         file.close()
@@ -40,7 +40,6 @@ class DataBase:
                 file.write(texto)
         file.close()
         texto = []
-        print("Compras",self.Compras)
         for item in self.Compras:
             texto.append(str(item.writeFile())+"\n")
         with open("DB_Compras.txt","w") as file:
@@ -49,19 +48,20 @@ class DataBase:
     def ReadFile(self):
         file = open("DB_Inventario.txt","r")
         for linea in file:
-            id,title,platform,gender,priceBuy,priceSale,cant = linea.split(',')
-            self.Inventario[id] = Game(id,title,priceBuy,priceSale,gender,platform,cant)
+            id,title,platform,gender,priceBuy,priceSale,cant = linea.strip().split(',')
+            self.Inventario[int(id)] = Game(id,title,priceBuy,priceSale,gender,platform,cant)
+            self.index +=1
         file.close()
 
         file = open("DB_Ventas.txt","r")
         for linea in file:
-            id,title,platform,gender,priceBuy,priceSale,cant = linea.split(',')
+            id,title,platform,gender,priceBuy,priceSale,cant = linea.strip().split(',')
             self.Ventas.append(Game(id,title,priceBuy,priceSale,gender,platform,cant))
         file.close()
 
         file = open("DB_Compras.txt","r")
         for linea in file:
-            id,title,platform,gender,priceBuy,priceSale,cant = linea.split(',')
+            id,title,platform,gender,priceBuy,priceSale,cant = linea.strip().split(',')
             self.Compras.append(Game(id,title,priceBuy,priceSale,gender,platform,cant))
         file.close()
 
@@ -82,7 +82,7 @@ class DataBase:
         file.write(f"=> Cantidad de Juegos Comprados: {cantJuegos} juegos.\n")
         file.write(f"=> Costo total: $ {costo}.\n\n Detalle de Compra: \n"+detalle)
 
-        file.write("Reporte de Ventas\n")
+        file.write("\nReporte de Ventas\n")
         cantJuegos = 0
         costo = 0
         detalle = ""

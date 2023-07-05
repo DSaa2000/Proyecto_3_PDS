@@ -27,8 +27,6 @@ def registerGame():
 def buyGame():
     juegoSeleccionado = input_select(db.Inventario,"Ingrese ID del juego que desea comprar:")
     cantidad = input("Cantidad a comprar")
-  
-    return
 
 perfilActual = input_select(db.Perfiles,"Seleccione tipo de usuario:")
 
