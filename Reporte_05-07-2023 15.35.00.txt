@@ -1,0 +1,30 @@
+Fecha: 05/07/2023 15:35:00
+
+Reporte de Compras
+=> Cantidad de Compras: 12 compras realizadas.
+=> Cantidad de Juegos Comprados: 55 juegos.
+=> Costo total: $ 410042.0.
+
+ Detalle de Compra: 
+=> Título: LOL, Plataform: PC, Género: Deportes, Precio Compra: 20000, Cantidad: 3
+=> Título: Doom, Plataform: PC, Género: AcciÃ³n, Precio Compra: 30000, Cantidad: 5
+=> Título: Minecraft dungeons, Plataform: Consola, Género: Aventura, Precio Compra: 40000, Cantidad: 5
+=> Título: 2, Plataform: PC, Género: Deportes, Precio Compra: 1, Cantidad: 1
+=> Título: Test, Plataform: PC, Género: Acción, Precio Compra: 1, Cantidad: 10
+=> Título: Test, Plataform: PC, Género: Acción, Precio Compra: 1, Cantidad: 10
+=> Título: Test, Plataform: PC, Género: Acción, Precio Compra: 1, Cantidad: 5
+=> Título: Test_Sale_1, Plataform: PC, Género: Acción, Precio Compra: 1, Cantidad: 5
+=> Título: Test_Sale_2, Plataform: PC, Género: Acción, Precio Compra: 1, Cantidad: 5
+=> Título: Test_Sale_3, Plataform: PC, Género: Acción, Precio Compra: 1, Cantidad: 5
+=> Título: Test_Sale_4, Plataform: PC, Género: Acción, Precio Compra: 1, Cantidad: 1
+=> Título: Test_Sale_5, Plataform: PC, Género: Acción, Precio Compra: 1, Cantidad: 0
+
+Reporte de Ventas
+=> Cantidad de Juegos Vendidos: 4 juegos.
+=> Venta total: $ 190000.0.
+
+ Detalle de la Venta: 
+=> Título: LOL, Plataform: PC, Género: Deportes, Precio Venta: 23000, Cantidad: 0
+=> Título: Doom, Plataform: PC, Género: AcciÃ³n, Precio Venta: 40000, Cantidad: 1
+=> Título: Doom, Plataform: PC, Género: AcciÃ³n, Precio Venta: 40000, Cantidad: 0
+=> Título: Minecraft dungeons, Plataform: Consola, Género: Aventura, Precio Venta: 50000, Cantidad: 3

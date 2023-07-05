@@ -20,5 +20,8 @@ class Game:
     def DetailSale_toString(self):
         return f"=> Título: {self.title}, Plataform: {self.platform}, Género: {self.gender}, Precio Venta: {self.priceSale}, Cantidad: {self.count}\n"
     
+    def DetailSale_Product(self):
+        return f"Título: {self.title}, Plataform: {self.platform}, Género: {self.gender}, Precio Venta: {self.priceSale}, Cantidad: {self.count}"
+    
     def writeFile(self):
         return f"{self.id},{self.title},{self.platform},{self.gender},{self.priceBuy},{self.priceSale},{self.count}"

@@ -25,6 +25,11 @@ class DataBase:
         for item in self.Inventario:
             print(self.Inventario[item].toString())
 
+    def listInventoryToSale(self):
+        lista = []
+        for item in self.Inventario:
+            lista.append(self.Inventario[item].DetailSale_Product())
+        return lista
     def Save(self):
         file = open("DB_Inventario.txt","w")
         for item in self.Inventario:
@@ -35,7 +40,7 @@ class DataBase:
 
         file = open("DB_Ventas.txt","w")
         for item in self.Ventas:
-            texto = str(item.writeFile())
+            texto = str(item.writeFile())+"\n"
             if texto != "" and texto != "\n":
                 file.write(texto)
         file.close()
@@ -50,7 +55,7 @@ class DataBase:
         for linea in file:
             id,title,platform,gender,priceBuy,priceSale,cant = linea.strip().split(',')
             self.Inventario[int(id)] = Game(id,title,priceBuy,priceSale,gender,platform,cant)
-            self.index +=1
+            self.index = max(self.index + 1,int(id)+1)
         file.close()
 
         file = open("DB_Ventas.txt","r")
@@ -67,7 +72,8 @@ class DataBase:
 
     def reportTXT(self):
         formatoNombre = "%d-%m-%Y %H.%M.%S"
-        file = open("Reporte_"+str(datetime.now().strftime(formatoNombre))+".txt","w")
+        nombre = "Reporte_"+str(datetime.now().strftime(formatoNombre))+".txt"
+        file = open(nombre,"w")
         formato = "%d/%m/%Y %H:%M:%S"
         file.write(f"Fecha: {datetime.now().strftime(formato)}\n\n")
         file.write("Reporte de Compras\n")
@@ -94,3 +100,4 @@ class DataBase:
         file.write(f"=> Venta total: $ {costo}.\n\n Detalle de la Venta: \n"+detalle)
 
         file.close()
+        return nombre

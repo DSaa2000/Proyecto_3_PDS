@@ -1,4 +1,5 @@
 0,LOL,PC,Deportes,20000,23000,3
 1,Doom,PC,Acción,30000,40000,5
 2,Minecraft dungeons,Consola,Aventura,40000,50000,5
-3,2,PC,Deportes,e,e,dfvd
+3,2,PC,Deportes,1,1,1
+4,"Warcraft",PC,Aventura,10,15,10

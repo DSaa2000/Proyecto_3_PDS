@@ -1,0 +1,5 @@
+0,LOL,PC,Deportes,20000,23000,0
+1,Doom,PC,Acción,30000,40000,1
+1,Doom,PC,Acción,30000,40000,0
+2,Minecraft dungeons,Consola,Aventura,40000,50000,3
+0,LOL,PC,Deportes,20000,23000,5
